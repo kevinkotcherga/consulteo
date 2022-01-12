@@ -6,11 +6,11 @@
         <%= simple_form_for @consultation do |f| %>
           <%= f.association :doctor, collection: @doctors, :label_method => :last_name, :value_method => :id, :include_blank => false, prompt: "Select a doctor", input_html: { data: { controller: "slect2" } } %>
           <%= f.association :patient, collection: @patients, :label_method => :last_name, :value_method => :id, :include_blank => false, prompt: "Select a patient", input_html: { data: { controller: "slect2" } } %>
-          <%= f.submit class: "btn btn-primary m-1" %>
+          <%= f.submit class: "btn btn-light shadow mt-2 mb-2 p-3" %>
         <% end %>
-        <%= link_to 'Create Doctor', new_doctor_path, class: 'btn btn-info m-1' %>
-        <%= link_to 'Create Patient', new_patient_path, class: 'btn btn-info m-1' %>
-        <%= link_to 'Back', root_path, class: 'btn btn-info m-1' %>
+        <%= link_to 'Create Doctor', new_doctor_path, class: 'btn btn-light shadow mt-5 me-3 p-3' %>
+        <%= link_to 'Create Patient', new_patient_path, class: 'btn btn-light shadow mt-5 me-3 p-3' %>
+        <%= link_to 'Back', root_path, class: 'btn btn-light shadow mt-5 me-3 p-3' %>
       </div>
     </div>
   </div>
