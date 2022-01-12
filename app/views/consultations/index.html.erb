@@ -1,0 +1,23 @@
+<div class="container py-5">
+  <div class="row">
+    <div class="col-12">
+      <div class="bg-white rounded p-5 m-5 shadow">
+        <h1 class="mb-5">My consultations</h1>
+
+        <div class="row">
+            <% @consultations.each do |consultation| %>
+              <div>
+                <%= link_to consultation_path(consultation), class: "btn btn-primary mt-2 mb-2" do %>
+                    <p>Dr <%= consultation.doctor.last_name %> and patient <%= consultation.patient.last_name %></p>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
+
+        <%= link_to "New consultation", new_consultation_path, class: "btn btn-info mt-5" %>
+        <%= link_to "Doctors", doctors_path, class: "btn btn-info mt-5" %>
+        <%= link_to "Patients", patients_path, class: "btn btn-info mt-5" %>
+      </div>
+    </div>
+  </div>
+</div>

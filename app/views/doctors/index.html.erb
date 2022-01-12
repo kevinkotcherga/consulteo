@@ -1,0 +1,22 @@
+<div class="container py-5">
+  <div class="row">
+    <div class="col-12">
+      <div class="bg-white rounded p-5 m-5 shadow">
+        <h1 class="mb-5">Doctors</h1>
+
+        <div class="row">
+            <% @doctors.each do |doctor| %>
+              <div>
+                <%= link_to doctor_path(doctor), class: "btn btn-primary m-1" do %>
+                    <%= doctor.last_name %>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
+
+        <%= link_to 'Create Doctor', new_doctor_path, class: 'btn btn-info m-1' %>
+        <%= link_to 'Back', root_path, class: 'btn btn-info m-1' %>
+      </div>
+    </div>
+  </div>
+</div>
