@@ -1,16 +1,18 @@
 <div class="container py-5">
   <div class="row">
     <div class="col-12">
-      <div class="bg-white rounded p-5 m-5 shadow">
+      <div class="bg-white rounded p-5 m-5 shadow h-100 position-relative">
         <h1 class="mb-5">Consultation</h1>
         <h2 class="h4">Between Doctor <%= @consultation.doctor.last_name %> (<%= @consultation.doctor.speciality %>) and the patient <%= @consultation.patient.last_name %>.</h2>
-        <%= link_to "Delete", consultation_path(@consultation), data: {
-                    turbo_method: :delete,
-                    turbo_confirm: "Are you sure?"
-                  }, class: 'btn btn-danger shadow mt-5 me-3 p-3' %>
 
-        <%= link_to 'Edit', edit_consultation_path, class: 'btn btn-light shadow mt-5 me-3 p-3' %>
-        <%= link_to 'Back', root_path, class: 'btn btn-light shadow mt-5 me-3 p-3' %>
+        <div class="d-flex justify-content-end position-absolute bottom-0 end-0 p-3">
+          <%= link_to "Delete", consultation_path(@consultation), data: {
+                      turbo_method: :delete,
+                      turbo_confirm: "Are you sure?"
+                    }, class: 'btn btn-danger shadow mt-5 me-3 p-3' %>
+          <%= link_to 'Edit', edit_consultation_path, class: 'btn btn-light shadow mt-5 me-3 p-3' %>
+          <%= link_to 'Back', root_path, class: 'btn btn-light shadow mt-5 me-3 p-3' %>
+        </div>
       </div>
     </div>
   </div>
