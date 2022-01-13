@@ -27,7 +27,7 @@ class ConsultationsController < ApplicationController
     @consultation = Consultation.find(params[:id])
     @consultation.destroy
 
-    redirect_to root_path
+    redirect_to root_path, status: :see_other
   end
 
   def edit
