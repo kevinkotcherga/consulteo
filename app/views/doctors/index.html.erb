@@ -7,15 +7,15 @@
         <div class="row">
             <% @doctors.each do |doctor| %>
               <div>
-                <%= link_to doctor_path(doctor), class: "btn btn-primary m-1" do %>
-                    <%= doctor.last_name %>
+                <%= link_to doctor_path(doctor), class: "btn btn-light shadow mt-2 mb-2" do %>
+                    <div class="p-3">Dr. <%= doctor.last_name %></div>
                 <% end %>
               </div>
             <% end %>
           </div>
 
-        <%= link_to 'Create Doctor', new_doctor_path, class: 'btn btn-info m-1' %>
-        <%= link_to 'Back', root_path, class: 'btn btn-info m-1' %>
+        <%= link_to 'Create Doctor', new_doctor_path, class: 'btn btn-light shadow mt-5 me-3 p-3' %>
+        <%= link_to 'Back', root_path, class: 'btn btn-light shadow mt-5 me-3 p-3' %>
       </div>
     </div>
   </div>

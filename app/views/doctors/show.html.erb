@@ -2,7 +2,8 @@
   <div class="row">
     <div class="col-12">
       <div class="bg-white rounded p-5 m-5 shadow">
-        <h1 class="mb-5"><%= @doctor.last_name %></h1>
+        <h1 class="mb-2">Dr. <%= @doctor.last_name %></h1>
+          <h2 class="mb-5 h3"><%= @doctor.speciality %></h2>
         <%= link_to "Delete", doctor_path(@doctor), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-danger m-1' %>
         <%= link_to 'Edit', edit_doctor_path, class: 'btn btn-secondary m-1' %>
         <%= link_to 'Back', doctors_path, class: 'btn btn-info m-1' %>
